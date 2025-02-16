@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Aspire.OllamaSharp" Version="9.1.1-beta.177" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CatalogSupport.ServiceDefaults\CatalogSupport.ServiceDefaults.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\CatalogSupport.ApiService\Infrastructure\AI\AiService.cs" Link="Shared\AiService.cs" />
+    <Compile Include="..\CatalogSupport.ApiService\Infrastructure\AI\IAiService.cs" Link="Shared\IAiService.cs" />
+  </ItemGroup>
+
+</Project>
